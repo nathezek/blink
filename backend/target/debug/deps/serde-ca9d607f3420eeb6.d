@@ -1,0 +1,14 @@
+/home/comrade/Documents/learning/experimentals/blink/backend/target/debug/deps/serde-ca9d607f3420eeb6.d: /home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /home/comrade/Documents/learning/experimentals/blink/backend/target/debug/build/serde-ac1d96840bc74123/out/private.rs
+
+/home/comrade/Documents/learning/experimentals/blink/backend/target/debug/deps/libserde-ca9d607f3420eeb6.rlib: /home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /home/comrade/Documents/learning/experimentals/blink/backend/target/debug/build/serde-ac1d96840bc74123/out/private.rs
+
+/home/comrade/Documents/learning/experimentals/blink/backend/target/debug/deps/libserde-ca9d607f3420eeb6.rmeta: /home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs /home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs /home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs /home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs /home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs /home/comrade/Documents/learning/experimentals/blink/backend/target/debug/build/serde-ac1d96840bc74123/out/private.rs
+
+/home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/lib.rs:
+/home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/integer128.rs:
+/home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/mod.rs:
+/home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/de.rs:
+/home/comrade/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde-1.0.228/src/private/ser.rs:
+/home/comrade/Documents/learning/experimentals/blink/backend/target/debug/build/serde-ac1d96840bc74123/out/private.rs:
+
+# env-dep:OUT_DIR=/home/comrade/Documents/learning/experimentals/blink/backend/target/debug/build/serde-ac1d96840bc74123/out

@@ -1,24 +1,31 @@
-import './style.css'
-import typescriptLogo from './typescript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.ts'
+import type { Todo } from "../types/todo.ts";
 
-document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-  <div>
-    <a href="https://vite.dev" target="_blank">
-      <img src="${viteLogo}" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://www.typescriptlang.org/" target="_blank">
-      <img src="${typescriptLogo}" class="logo vanilla" alt="TypeScript logo" />
-    </a>
-    <h1>Vite + TypeScript</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite and TypeScript logos to learn more
-    </p>
-  </div>
-`
+const fetchData = async () => {
+    const response = await fetch("http://localhost:8000/api/todos");
 
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+    if (!response.ok) {
+        console.error("Failed to fetch todos");
+        return;
+    }
+
+    const data: Todo[] = await response.json();
+    renderData(data);
+};
+
+const renderData = (data: Todo[]) => {
+    const container = document.getElementById("data-container");
+    if (!container) return;
+
+    container.innerHTML = data
+        .map(
+            (todo) => `
+                <div class="p-4 border-b border-gray-300">
+                    <strong>#${todo.id}</strong> — ${todo.task}
+                    ${todo.completed ? "✅" : "❌"}
+                </div>
+            `,
+        )
+        .join("");
+};
+
+document.getElementById("fetch-data")?.addEventListener("click", fetchData);

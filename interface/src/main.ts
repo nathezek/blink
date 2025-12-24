@@ -46,9 +46,8 @@ const renderData = (data: Todo[]) => {
     container.innerHTML = data
         .map(
             (todo) => `
-                <div class="p-4 border-b border-gray-300">
-                    <strong>#${todo.id}</strong> — ${todo.task}
-                    ${todo.completed ? "✅" : "❌"}
+                <div class="p-3 text-sm w-full border-b border-neutral-300">
+                    <strong>${todo.id}.</strong> ${todo.task}
                 </div>
             `,
         )

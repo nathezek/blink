@@ -6,20 +6,39 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>interface</title>
         <link rel="stylesheet" href="./src/style.css" />
+        <link
+            rel="stylesheet"
+            href="node_modules/font-awesome/css/font-awesome.min.css"
+        />
+        <link
+            rel="stylesheet"
+            href="/node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+        />
     </head>
-    <body>
+    <body class="w-full pt-12 flex flex-col items-center">
         <div id="app"></div>
-        <div>
-            <input id="task_input" type="text" placeholder="Enter a task" />
-            <button id="add_task_btn">Add Task</button>
+        <div class="m-4 flex items-center gap-x-3 h-8">
+            <button
+                id="fetch-data"
+                class="p-2 hover:bg-neutral-200 h-full flex items-center justify-center text-neutral-700 rounded cursor-pointer text-sm"
+            >
+                <i class="fa-solid fa-arrows-rotate"></i>
+            </button>
+            <input
+                id="task_input"
+                type="text"
+                placeholder="Enter a task"
+                class="h-full border-neutral-200 border text-sm px-2 outline-neutral-400 rounded-sm"
+            />
+            <button
+                id="add_task_btn"
+                class="h-full w-fit px-2 text-sm bg-blue-600 text-blue-100 rounded-sm pr-3 cursor-pointer"
+            >
+                <i class="fas fa-plus"></i> Add Task
+            </button>
         </div>
-        <button
-            id="fetch-data"
-            class="p-2 bg-blue-500 text-white rounded m-4 cursor-pointer"
-        >
-            Fetch Data
-        </button>
-        <div id="data-container"></div>
+
+        <div id="data-container" class="w-96"></div>
         <script type="module" src="/src/main.ts"></script>
     </body>
 </html>

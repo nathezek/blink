@@ -6,3 +6,8 @@ pub struct Todo {
     pub task: String,
     pub completed: bool,
 }
+
+#[derive(Debug, Deserialize)]
+pub struct CreateTodo {
+    pub task: String,
+}

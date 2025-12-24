@@ -3,16 +3,18 @@ use actix_web::{web, App, HttpResponse, HttpServer};
 use std::sync::Mutex;
 
 mod models;
-use models::Todo;
+use models::{CreateTodo, Todo};
 
 struct AppState {
     todos: Mutex<Vec<Todo>>,
+    next_id: Mutex<usize>,
 }
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     let state = web::Data::new(AppState {
         todos: Mutex::new(Vec::new()),
+        next_id: Mutex::new(1),
     });
 
     HttpServer::new(move || {
@@ -39,10 +41,19 @@ async fn get_todos(data: web::Data<AppState>) -> HttpResponse {
     HttpResponse::Ok().json(&*todos)
 }
 
-async fn add_todo(new_todo: web::Json<Todo>, data: web::Data<AppState>) -> HttpResponse {
+async fn add_todo(new_todo: web::Json<CreateTodo>, data: web::Data<AppState>) -> HttpResponse {
     let mut todos = data.todos.lock().unwrap();
-    let todo = new_todo.into_inner();
+    let mut next_id = data.next_id.lock().unwrap();
+
+    let todo = Todo {
+        id: *next_id,
+        task: new_todo.task.clone(),
+        completed: false,
+    };
+
+    *next_id += 1;
     todos.push(todo.clone());
+
     HttpResponse::Created().json(todo)
 }
 
